@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fichier css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title> Votre plateforme de monitoring scolaire</title>
+</head>
+<body>
+  <div class="container">
+    <header class="title" >
+        <div class="logo" >
+            <img src="images/monito_logo.jpg" alt="logo">
+        </div>
+        <div>
+            <h3><i class="fa-solid fa-mobile"></i> &nbsp; Joignez-nous au 00224 622596521</h3>
+        </div>
+    </header>
+        <section class="carroussel">
+            <div class="images">
+                    <img class="slider-item" src="images/images_1.jpg">
+                    <img class="slider-item" src="images/images_2.jpg">
+                    <img class="slider-item"src="images/images_3.jpg"> 
+            </div>
+            <div class="fleches">
+                <span><i id="gauche" class="fa-solid fa-angles-left fa-2xl"></i></span>
+                <span><i id="droite" class="fa-solid fa-angles-right fa-2xl"></i></span>
+            </div>
+        </section>
+        <nav>
+            <div id="toggle-btn">
+                <i class="fa-solid fa-bars"></i> 
+            </div>
+                
+            <ul id="ulref">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">A propos</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+            </ul>
+        </nav>
+    <section class="taches">
+        <div class="tache1">
+            <h5>Nos differentes tâches</h5><br/>
+					<p><b>- CONTROLE DE PRESENCE EN CLASSE </b></p>
+					<p>Le parent d'élève pourra suivre son enfant via son smartphone ou son laptop depuis son travail ou la maison</p>
+					<p>Elle devra notamment se connecter et aller sur le compte de la classe de son enfant via cette plateforme</p><br/>
+					<p><b>- CONTROLE DES DEVOIRS ET DES EVALUATIONS</b></p>
+					<p>Le parent ou la parente d'élève pourra suivre l"évolution de son enfant via le compte de la classe.</p>
+					<p>Les mises à jours journalière, hebdomadaire, mensuelle et trimestrielle à travers cette plateforme du tableau <br>
+                         évolutif des élèves est un autre avantage.</p>
+					<p><b>- SUIVI DE L'ELEVE HORS DE L'ECOLE</b></p>
+					<P>Les parents pourront savoir si l'élève est sorti de l'école ou pas à travers la localisation.</p>
+        </div>
+        <div class="tache2">
+                <h4>Notre plateforme vous offre des avantages dignes de notre époque !</h4><br/>
+					<p>Les enseignants être consultés par les parents pour savoir les forces et les faiblesses de l'élève.</p>
+					<p>La bibliothèque de son école sera au besoin disponiblisée sur la plateforme</p>
+					<p>L'école et la maison seront encore plus proches que jamais.</p>
+					<p>Les responsables de l'école auront moins de pression et plus de vigilance.</p><br/>
+                    <button class="bouton"><i class="fa-solid fa-file-alt fa-xl"></i>&nbsp;FAITES-NOUS VOS SUGGESTIONS</button>
+        </div>
+    </section>
+    <section class="temoignages">
+            <h2>Ce que les gens pensent de notre plateforme</h2>
+            <div class="temoignage_card">
+                <div class="card">
+                    <h5 class="name">Barry I.</h5>
+                    <p>C'est la plateforme de mes rêves, j'ai repris mon boulot sans trop m'inquiéter pour mes enfants.</p>
+                </div>
+                <div class="card">
+                    <h5 class="name">Kamano A.</h5>
+                    <p>Mon fils , fils est devenu vraiment bosseur depuis que je le surveille sur cette plateforme!.</p>
+                </div>
+                <div class="card">
+                    <h5 class="name">Pema G.</h5>
+                    <p>J'ai six élèves sous ma charge et aujourd'hui je peux savoir tout sur eux depuis mon bureau!. </p>
+                </div>
+                <div class="card">
+                    <h5 class="name">Hélène N.</h5>
+                    <p>Mon mari et moi , nous ne stressons plus beaucoup à cause de notre fils!</p>
+                </div>
+                <div class="card">
+                    <h5 class="name">Sylla V.</h5>
+                    <p>C'est la plateforme idéale pour n'importe qui aimerait mieux encadrer son enfant.</p>
+                </div>
+                <div class="card">
+                    <h5 class="name">Siby S.</h5>
+                    <p>Je la recommande à tous les parents qui ont des élèves difficles à surveiller.....</p>
+                </div>
+            </div>
+            <button>Plus de temoignages des parents d'élèves ici</button>
+
+    </section>
+    <footer>
+        <p>monitoringscolaire.be Numéro entreprise : 0123.456.789 tel: 00224 622596521</p>
+    </footer>
+    <script>
+        // Menu 
+        const btn = document.querySelector('#toggle-btn');
+        const ul = document.getElementById('ulref');
+        btn.onclick = ()=> ul.style.opacity == 0 ? ul.style.opacity = 1 : ul.style.opacity = 0;
+        // Carroussel
+        const carroussel_content = document.querySelector('.images');
+        const devant = document.getElementById('gauche');
+        const derrière = document.getElementById('droite');
+        let translate = 0;
+        devant.onclick = ()=>{
+            translate += 100;
+            if(translate > 0) 
+            translate = 0;
+        carroussel_content.style.transform = 'translatex(' + translate + '%)';
+        }
+        derrière.onclick = ()=>{
+            translate -= 100;
+            if(translate < -200 )
+            translate  = -200;
+            carroussel_content.style.transform = 'translatex(' + translate + '%)';
+        }
+    </script>
+  </div>
+</body>
+</html>
